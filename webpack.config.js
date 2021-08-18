@@ -9,6 +9,14 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                use: ['file-loader'],
+            },
+            {
                 test: /\.?js$/,
                 exclude: /node_modules/,
                 use: {
